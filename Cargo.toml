@@ -1,0 +1,12 @@
+[workspace]
+resolver = "2"
+
+members = [
+    "mediaplayer",
+    "playerctl",
+]
+
+default-members = ["mediaplayer"]
+
+
+[workspace.dependencies]
