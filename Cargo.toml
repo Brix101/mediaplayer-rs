@@ -10,4 +10,7 @@ default-members = ["mediaplayer"]
 
 
 [workspace.dependencies]
+anyhow = "1.0.75"
 clap = "4.4.11"
+thiserror = "1.0.50"
+tracing = "0.1.40"

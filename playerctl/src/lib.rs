@@ -1,14 +1,27 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
+#[derive(Debug)]
+pub struct PlayerManager {
+    selected_player: Option<String>,
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+impl PlayerManager {
+    pub fn new(player: Option<String>) -> Self {
+        Self {
+            selected_player: player,
+        }
+    }
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+    pub fn run(&self) {
+        println!("Player {:?}", self.selected_player);
     }
 }
+
+// #[cfg(test)]
+// mod tests {
+//     use super::*;
+//
+//     #[test]
+//     fn it_works() {
+//         let result = add(2, 2);
+//         assert_eq!(result, 4);
+//     }
+// }
