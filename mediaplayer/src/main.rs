@@ -1,5 +1,8 @@
-use playerctl;
+use mediaplayer::cmd::Args;
 
 fn main() {
-    println!("Hello, world! {}!", playerctl::add(1, 2));
+    let args = Args::parse();
+
+    // Access the parsed arguments
+    println!("Hello {}", args.player.unwrap_or("world".to_string()));
 }
